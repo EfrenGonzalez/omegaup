@@ -887,6 +887,15 @@ class UserController extends Controller {
             $keys = array (
                 'OIC-16' => 225
             );
+        } elseif ($r['contest_type'] == 'OMIQROO') {
+            if ($r['current_user']->username != 'pablobatun'
+                && !$is_system_admin
+            ) {
+                throw new ForbiddenAccessException();
+            }
+            $keys = array (
+                'ROO-17' => 160
+            );
         } else {
             throw new InvalidParameterException(
                 'parameterNotInExpectedSet',
