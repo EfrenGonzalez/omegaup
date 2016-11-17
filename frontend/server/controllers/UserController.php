@@ -878,14 +878,14 @@ class UserController extends Controller {
             $keys = array(
                 'CCUPITSUR-16' => 50,
             );
-        } elseif ($r['contest_type'] == 'CONALEP') {
-            if ($r['current_user']->username != 'reyes811'
+        } elseif ($r['contest_type'] == 'OMIAGS') {
+            if ($r['current_user']->username != 'EfrenGonzalez'
                 && !$is_system_admin
             ) {
                 throw new ForbiddenAccessException();
             }
             $keys = array (
-                'OIC-16' => 225
+                'OMIAGS-16' => 60
             );
         } else {
             throw new InvalidParameterException(
